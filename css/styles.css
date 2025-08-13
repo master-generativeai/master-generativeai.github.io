@@ -1152,6 +1152,7 @@ padding:35px 0;
 font-size: 14px;
 color: #A3A3A3;
 text-align: justify;
+line-height: 1.7;
 }
 .header .navbar-nav > li > a {
 	padding: 7px 12px;
