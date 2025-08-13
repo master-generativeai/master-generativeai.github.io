@@ -1160,7 +1160,7 @@ display: block;
 width: 100%;
 }
 .flex-caption{
-bottom:-20px;
+bottom:0px;
 }
 .flex-caption h3{
 font-size:30px;
