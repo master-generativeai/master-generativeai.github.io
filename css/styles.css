@@ -1160,7 +1160,7 @@ display: block;
 width: 100%;
 }
 .flex-caption{
-bottom:0px;
+bottom:-20px;
 }
 .flex-caption h3{
 font-size:30px;
@@ -1191,6 +1191,9 @@ font-size:20px;
 }
 .flex-caption p{
 font-size:15px !important;
+}
+.flex-caption a{
+display: none;
 }
 .responsive-headline {
 	font-size: 16px !important
