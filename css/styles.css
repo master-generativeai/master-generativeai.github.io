@@ -374,8 +374,8 @@ margin-bottom: 30px;
 /*----Nav ----*/
 .header .navbar-brand {
 	float: left;
-	padding: 22px 15px;
 	line-height: 18px;
+	padding: 0px !important!;
 	height: 50px;/*color:#A43E89;*/
 }
 .navbar-brand b {
