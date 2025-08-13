@@ -29,6 +29,57 @@
 <link rel="stylesheet" href="css/styles.css" />
 <!-- Font Awesome -->
 <link href="font/css/font-awesome.min.css" rel="stylesheet">
+	  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #101010;
+      --muted: #6b7280;
+      --brand: #2563eb;
+      --border: #e5e7eb;
+      --radius: 14px;
+      --shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+
+    .wrap { max-width: 1100px; margin: 24px auto; padding: 0 16px 64px; }
+
+    .notice { background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; color: #334155; font-size: 14px; margin: 0 0 18px; }
+
+    .module { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px; margin: 18px 0 28px; }
+    .module h2 { font-size: clamp(18px, 2.2vw, 24px); margin: 0 0 10px; }
+    .module .meta { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+
+    /* Table (desktop-first) */
+    .table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .table caption { text-align: left; font-weight: 600; margin-bottom: 8px; }
+    .table thead th { position: sticky; top: 0; background: #f9fafb; border-bottom: 1px solid var(--border); text-align: left; font-weight: 600; padding: 10px; }
+    .table tbody td { border-top: 1px solid var(--border); padding: 10px; vertical-align: top; }
+    .table tfoot td { border-top: 2px solid var(--border); font-weight: 700; padding: 10px; }
+    .nowrap { white-space: nowrap; }
+
+    /* Zebra rows for readability */
+    .table tbody tr:nth-child(even) td { background: #fcfcfd; }
+
+    /* Responsive: transform rows into cards on narrow screens */
+    @media (max-width: 860px) {
+      .table thead { display: none; }
+      .table, .table tbody, .table tr, .table td { display: block; width: 100%; }
+      .table tr { border: 1px solid var(--border); border-radius: 12px; margin: 0 0 12px; box-shadow: var(--shadow); overflow: hidden; }
+      .table tbody td { border: 0; border-top: 1px solid var(--border); }
+      .table tbody td:first-child { border-top: 0; }
+      .table td { padding: 10px 12px; }
+      .table td::before { content: attr(data-label); display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; text-transform: none; letter-spacing: 0; }
+      .nowrap { white-space: normal; }
+    }
+
+    /* Tiny helper badges */
+    .badge { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); color: #334155; background: #f8fafc; }
+    .totals { background: #f9fafb; border-radius: 10px; padding: 6px 10px; display: inline-flex; gap: 10px; align-items: center; border: 1px solid var(--border); }
+    .totals b { font-weight: 700; }
+
+    nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+    nav a { text-decoration: none; border: 1px solid var(--border); padding: 8px 10px; border-radius: 999px; font-size: 13px; color: var(--fg); }
+    nav a:hover { border-color: var(--brand); }
+  </style>
 </head>
 
 <body>
@@ -138,6 +189,258 @@
       <h2>Piano Didattico</h2>
       <p>Lo Short Master si articolerà in 4 moduli, dove docenti di rilevanza internazionale si alterneranno per fornire le basi teoriche e pratiche dei più moderni approcci di AI Generativa.</p>
     </div>
+
+  <div class="wrap">
+    <header>
+      <h1>Short Master: Generative AI — Piano Didattico (A.A. 2025/2026)</h1>
+      <p>Struttura in tabelle responsive, leggibili su desktop e mobile.</p>
+    </header>
+
+    <nav aria-label="Vai al modulo">
+      <a href="#mod1">Modulo 1</a>
+      <a href="#mod2">Modulo 2</a>
+      <a href="#mod3">Modulo 3</a>
+      <a href="#mod4">Modulo 4</a>
+    </nav>
+
+    <!-- Modulo 1 -->
+    <section id="mod1" class="module" aria-labelledby="h-mod1">
+      <h2 id="h-mod1">Modulo 1 — Fondamenti di Generative AI e Large Language Models</h2>
+      <div class="meta">Responsabili: Giovanni Semeraro, Marco Polignano, Marco de Gemmis</div>
+      <table class="table" role="table">
+        <caption>Attività didattiche</caption>
+        <thead>
+          <tr>
+            <th scope="col">Titolo lezione</th>
+            <th scope="col">Docente</th>
+            <th scope="col">Qualifica / Sede / SSD</th>
+            <th scope="col" class="nowrap">Lezioni (h)</th>
+            <th scope="col" class="nowrap">Esercitaz. (h)</th>
+            <th scope="col" class="nowrap">Studio (h)</th>
+            <th scope="col" class="nowrap">Stage / Seminari (h)</th>
+            <th scope="col" class="nowrap">CFU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Titolo lezione">Introduzione alla Generative AI</td>
+            <td data-label="Docente">Giovanni Semeraro</td>
+            <td data-label="Qualifica / Sede / SSD">PO, Dip. Informatica, INFO-01/A</td>
+            <td data-label="Lezioni (h)">1</td>
+            <td data-label="Esercitaz. (h)">2</td>
+            <td data-label="Studio (h)">3</td>
+            <td data-label="Stage / Seminari (h)">0</td>
+            <td data-label="CFU">0,1</td>
+          </tr>
+          <tr>
+            <td data-label="Titolo lezione">Architettura dei Transformer e meccanismi di attenzione</td>
+            <td data-label="Docente">Marco Polignano</td>
+            <td data-label="Qualifica / Sede / SSD">RTDa, Dip. Informatica, INFO-01/A</td>
+            <td data-label="Lezioni (h)">2</td>
+            <td data-label="Esercitaz. (h)">4</td>
+            <td data-label="Studio (h)">6</td>
+            <td data-label="Stage / Seminari (h)">0</td>
+            <td data-label="CFU">0,3</td>
+          </tr>
+          <tr>
+            <td data-label="Titolo lezione">Large Language Models (LLMs)</td>
+            <td data-label="Docente">Marco Polignano</td>
+            <td data-label="Qualifica / Sede / SSD">RTDa, Dip. Informatica, INFO-01/A</td>
+            <td data-label="Lezioni (h)">4</td>
+            <td data-label="Esercitaz. (h)">1</td>
+            <td data-label="Studio (h)">9</td>
+            <td data-label="Stage / Seminari (h)">14</td>
+            <td data-label="CFU">0,6</td>
+          </tr>
+          <tr>
+            <td data-label="Titolo lezione">Rischi e limiti delle applicazioni basate su LLMs</td>
+            <td data-label="Docente">Marco de Gemmis</td>
+            <td data-label="Qualifica / Sede / SSD">PA, Dip. Informatica, INFO-01/A</td>
+            <td data-label="Lezioni (h)">2</td>
+            <td data-label="Esercitaz. (h)">1</td>
+            <td data-label="Studio (h)">5</td>
+            <td data-label="Stage / Seminari (h)">8</td>
+            <td data-label="CFU">0,3</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Totali</td>
+            <td>9</td>
+            <td>8</td>
+            <td>23</td>
+            <td>22</td>
+            <td>1,3</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Modulo 2 -->
+    <section id="mod2" class="module" aria-labelledby="h-mod2">
+      <h2 id="h-mod2">Modulo 2 — Tecniche di Prompt Engineering</h2>
+      <div class="meta">Responsabili: Cataldo Musto, Lucia Siciliani</div>
+      <table class="table" role="table">
+        <caption>Attività didattiche</caption>
+        <thead>
+          <tr>
+            <th scope="col">Titolo lezione</th>
+            <th scope="col">Docente</th>
+            <th scope="col">Qualifica / Sede / SSD</th>
+            <th scope="col" class="nowrap">Lezioni (h)</th>
+            <th scope="col" class="nowrap">Esercitaz. (h)</th>
+            <th scope="col" class="nowrap">Studio (h)</th>
+            <th scope="col" class="nowrap">Stage / Seminari (h)</th>
+            <th scope="col" class="nowrap">CFU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Titolo lezione">Contesto e struttura dei prompt; tecniche di base (zero- e few-shot)</td>
+            <td data-label="Docente">Cataldo Musto</td>
+            <td data-label="Qualifica / Sede / SSD">PA, Dip. Informatica, INFO-01/A</td>
+            <td data-label="Lezioni (h)">4</td>
+            <td data-label="Esercitaz. (h)">3</td>
+            <td data-label="Studio (h)">11</td>
+            <td data-label="Stage / Seminari (h)">18</td>
+            <td data-label="CFU">0,7</td>
+          </tr>
+          <tr>
+            <td data-label="Titolo lezione">Tecniche avanzate (Chain-of-Thought, Tree-of-Thoughts)</td>
+            <td data-label="Docente">Lucia Siciliani</td>
+            <td data-label="Qualifica / Sede / SSD">RTDa, Dip. Informatica, INFO-01/A</td>
+            <td data-label="Lezioni (h)">4</td>
+            <td data-label="Esercitaz. (h)">3</td>
+            <td data-label="Studio (h)">11</td>
+            <td data-label="Stage / Seminari (h)">18</td>
+            <td data-label="CFU">0,7</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Totali</td>
+            <td>8</td>
+            <td>6</td>
+            <td>22</td>
+            <td>36</td>
+            <td>1,4</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Modulo 3 -->
+    <section id="mod3" class="module" aria-labelledby="h-mod3">
+      <h2 id="h-mod3">Modulo 3 — Tecniche avanzate: Fine Tuning e Retrieval Augmented Generation (RAG)</h2>
+      <div class="meta">Responsabili: Pierpaolo Basile, Alessandro Petruzzelli</div>
+      <table class="table" role="table">
+        <caption>Attività didattiche</caption>
+        <thead>
+          <tr>
+            <th scope="col">Titolo lezione</th>
+            <th scope="col">Docente</th>
+            <th scope="col">Qualifica / Sede / SSD</th>
+            <th scope="col" class="nowrap">Lezioni (h)</th>
+            <th scope="col" class="nowrap">Esercitaz. (h)</th>
+            <th scope="col" class="nowrap">Studio (h)</th>
+            <th scope="col" class="nowrap">Stage / Seminari (h)</th>
+            <th scope="col" class="nowrap">CFU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Titolo lezione">Fine-tuning</td>
+            <td data-label="Docente">Pierpaolo Basile</td>
+            <td data-label="Qualifica / Sede / SSD">PA, Dip. Informatica, IINF-05/A</td>
+            <td data-label="Lezioni (h)">2</td>
+            <td data-label="Esercitaz. (h)">4</td>
+            <td data-label="Studio (h)">6</td>
+            <td data-label="Stage / Seminari (h)">0</td>
+            <td data-label="CFU">0,3</td>
+          </tr>
+          <tr>
+            <td data-label="Titolo lezione">Accesso a conoscenza esterna tramite RAG</td>
+            <td data-label="Docente">Alessandro Petruzzelli</td>
+            <td data-label="Qualifica / Sede / SSD">Dottorando, Dip. Informatica</td>
+            <td data-label="Lezioni (h)">2</td>
+            <td data-label="Esercitaz. (h)">4</td>
+            <td data-label="Studio (h)">6</td>
+            <td data-label="Stage / Seminari (h)">0</td>
+            <td data-label="CFU">0,3</td>
+          </tr>
+          <tr>
+            <td data-label="Titolo lezione">Best practice per un utilizzo efficace di fine tuning e RAG</td>
+            <td data-label="Docente">Alessandro Petruzzelli</td>
+            <td data-label="Qualifica / Sede / SSD">Dottorando, Dip. Informatica</td>
+            <td data-label="Lezioni (h)">3</td>
+            <td data-label="Esercitaz. (h)">2</td>
+            <td data-label="Studio (h)">5</td>
+            <td data-label="Stage / Seminari (h)">0</td>
+            <td data-label="CFU">0,2</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Totali</td>
+            <td>7</td>
+            <td>10</td>
+            <td>17</td>
+            <td>0</td>
+            <td>0,8</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Modulo 4 -->
+    <section id="mod4" class="module" aria-labelledby="h-mod4">
+      <h2 id="h-mod4">Modulo 4 — Caso di Studio</h2>
+      <div class="meta">Responsabile: Lucia Siciliani</div>
+      <table class="table" role="table">
+        <caption>Attività didattiche</caption>
+        <thead>
+          <tr>
+            <th scope="col">Titolo lezione</th>
+            <th scope="col">Docente</th>
+            <th scope="col">Qualifica / Sede / SSD</th>
+            <th scope="col" class="nowrap">Lezioni (h)</th>
+            <th scope="col" class="nowrap">Esercitaz. (h)</th>
+            <th scope="col" class="nowrap">Studio (h)</th>
+            <th scope="col" class="nowrap">Stage / Seminari (h)</th>
+            <th scope="col" class="nowrap">CFU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Titolo lezione">Sviluppo di un caso di studio pratico</td>
+            <td data-label="Docente">Lucia Siciliani</td>
+            <td data-label="Qualifica / Sede / SSD">RTDa, Dip. Informatica, INFO-01/A</td>
+            <td data-label="Lezioni (h)">10</td>
+            <td data-label="Esercitaz. (h)">6</td>
+            <td data-label="Studio (h)">16</td>
+            <td data-label="Stage / Seminari (h)">0</td>
+            <td data-label="CFU">0,6</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Totali</td>
+            <td>10</td>
+            <td>6</td>
+            <td>16</td>
+            <td>0</td>
+            <td>0,6</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <p class="notice" role="note">Nota: i dati sono stati trascritti nel formato web. Se vuoi, posso adattare le intestazioni o aggiungere colonne/filtri (p.es. durata complessiva, link al syllabus, ecc.).</p>
+  </div>
+
+
+
+	  
     <div class="row feature design">
       <div class="area1 columns right">
         <h3>Clean and Modern Design.</h3>
