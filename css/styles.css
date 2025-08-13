@@ -1183,7 +1183,8 @@ background: #38BEE7;
 	height: 240px;
 }
 .flex-caption{
-display:none;
+display:block;
+width: 100%;
 }
 .responsive-headline {
 	font-size: 16px !important
