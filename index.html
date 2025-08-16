@@ -79,6 +79,76 @@
     #modules { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
     #modules a { text-decoration: none; border: 1px solid var(--border); padding: 8px 10px; border-radius: 999px; font-size: 13px; color: var(--fg); }
     #modules a:hover { border-color: var(--brand); color: #26afd3; }
+
+		  /* Sezione generale */
+#our-team {
+  padding: 60px 20px;
+  background-color: #f9fafc;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+#our-team h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Layout a griglia */
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card docenti */
+.team-member {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.team-member h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #0056b3;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* Stile link come bottoni */
+.team-member a {
+  display: inline-block;
+  margin: 4px 6px 0 0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background-color: #e9f2ff;
+  color: #0056b3;
+}
+
+.team-member a:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
   </style>
 </head>
 
