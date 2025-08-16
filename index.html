@@ -741,5 +741,37 @@
 <script src="flexslider/jquery.flexslider.js"></script>
 <script src="js/custom.js" type="text/javascript"></script> 
 <script src="js/owl-carousel/owl.carousel.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Controlla se l'utente ha già dato il consenso
+    if (!localStorage.getItem("cookieConsent")) {
+        document.getElementById("cookie-banner").style.display = "block";
+    } else {
+        document.getElementById("cookie-banner").style.display = "none";
+    }
+
+    // Funzione accetta
+    document.getElementById("accept-cookies").onclick = function() {
+        localStorage.setItem("cookieConsent", "accepted");
+        document.getElementById("cookie-banner").style.display = "none";
+        // Qui puoi iniziare a caricare eventuali cookie/tracking
+    };
+
+    // Funzione rifiuta
+    document.getElementById("decline-cookies").onclick = function() {
+        localStorage.setItem("cookieConsent", "declined");
+        document.getElementById("cookie-banner").style.display = "none";
+        // Non caricare cookie/tracking
+    };
+});
+</script>
+
+	<div id="cookie-banner" style="position:fixed;bottom:0;left:0;width:100%;background:#222;color:white;padding:15px;text-align:center;z-index:1000;">
+    Questo sito utilizza cookie per migliorare l'esperienza utente. 
+    <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;">Accetta</button>
+    <button id="decline-cookies" style="margin-left:5px;padding:5px 10px;">Rifiuta</button>
+    <a href="https://www.uniba.it/it/ateneo/privacy/informative/info-cookie-e-sito" style="color:#0af;margin-left:10px;">Privacy Policy</a>
+</div>
+
 </body>
 </html>
