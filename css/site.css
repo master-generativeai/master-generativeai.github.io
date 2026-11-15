@@ -162,3 +162,13 @@ footer a{color:var(--muted)}
 }
 .tagrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
 .tagrow span{font-size:.75rem;font-weight:600;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35)}
+/* CTA evidente */
+.btn-cta{background:linear-gradient(135deg,#ffc933,#ff8a00);color:#1b1200;border-color:transparent;box-shadow:0 8px 24px rgba(255,138,0,.45);font-weight:800;animation:pulse 2.4s ease-in-out infinite}
+.btn-cta::after{content:"\2192";font-weight:800}
+.btn-cta:hover{box-shadow:0 12px 32px rgba(255,138,0,.6);filter:brightness(1.05)}
+.nav a.btn-cta{color:#1b1200}
+.btn-lg{padding:18px 34px;font-size:1.15rem}
+.cta-center{text-align:center;margin-top:36px}
+@keyframes pulse{0%,100%{box-shadow:0 8px 24px rgba(255,138,0,.45),0 0 0 0 rgba(255,168,0,.5)}50%{box-shadow:0 8px 24px rgba(255,138,0,.45),0 0 0 12px rgba(255,168,0,0)}}
+@media (prefers-reduced-motion:reduce){.btn-cta{animation:none}}
+@media (max-width:720px){.sticky .btn-cta{padding:12px 22px;font-size:1rem}.btn-lg{width:100%}}
